@@ -1,0 +1,14 @@
+Package: lcars
+Type: Package
+Title: Play LCARS Sound Effects
+Version: 1.0.0
+Authors@R:
+    person(given = "Nelson", family = "Stauffer", email = "ngstauffer@gmail.com", role = c("aut", "cre"))
+Description: Play back computer sound effects from star Trek The Next Generation and Star Trek Voyager sourced from https://trekcore.com/audio.
+License: GPL (>= 3)
+Imports:
+    audio,
+    stringr
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.1

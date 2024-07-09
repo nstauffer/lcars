@@ -1,5 +1,5 @@
 # lcars
-An R package for playing computer sound effects from Star Trek, inspired by [beepr](https://githubhttps://github.com/rasmusab/beepr). Audio samples sourced from [TrekCore](https://trekcore.com/audio).
+An R package for playing computer sound effects from Star Trek, inspired by [beepr](https://github.com/rasmusab/beepr). Audio samples sourced from [TrekCore](https://trekcore.com/audio).
 
 ## Installation
 ``` r

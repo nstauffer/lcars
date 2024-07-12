@@ -7,7 +7,7 @@
 lcars(sound = "attention")
 }
 \arguments{
-\item{sound}{Character string. The name of a sound effect to play. Defaults to \code{"attention"}.}
+\item{sound}{Character string. The name of a sound effect to play. Valid options are: \code{"alert"}, \code{"alert_long"}, \code{"attention"}, \code{"attention_alt"}, \code{"error"}, and \code{"warning"}. Defaults to \code{"attention"}.}
 }
 \description{
 Plays a handful of named sound effects from Star Trek The Next Generation and Star Trek Voyager.

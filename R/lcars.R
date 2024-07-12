@@ -1,7 +1,7 @@
 #' Play audio samples of LCARS sounds from Star Trek
 #' @description
 #' Plays a handful of named sound effects from Star Trek The Next Generation and Star Trek Voyager.
-#' @param sound Character string. The name of a sound effect to play. Defaults to \code{"attention"}.
+#' @param sound Character string. The name of a sound effect to play. Valid options are: \code{"alert"}, \code{"alert_long"}, \code{"attention"}, \code{"attention_alt"}, \code{"error"}, and \code{"warning"}. Defaults to \code{"attention"}.
 #' @export
 lcars <- function(sound = "attention") {
   # Get the filepath to the package's sounds folder
@@ -30,8 +30,8 @@ lcars <- function(sound = "attention") {
 #' @description
 #' Evaluates and returns the output from an expression. If there expression produces an error or a warning, an appropriate sound effect from Star Trek The Next Generation will be played.
 #' @param expr An expression to evaluate.
-#' @param warning Character string. The name of the sound to play if a warning is produced by the expression. Defaults to \code{"attention"}.
-#' @param errorCharacter string. The name of the sound to play if an error is produced by the expression. Defaults to \code{"error"}.
+#' @param warning Character string. The name of the sound to play if a warning is produced by the expression. Valid options are: \code{"alert"}, \code{"alert_long"}, \code{"attention"}, \code{"attention_alt"}, \code{"error"}, and \code{"warning"}. Defaults to \code{"attention"}.
+#' @param errorCharacter string. The name of the sound to play if an error is produced by the expression. Valid options are: \code{"alert"}, \code{"alert_long"}, \code{"attention"}, \code{"attention_alt"}, \code{"error"}, and \code{"warning"}. Defaults to \code{"error"}.
 #' @examples
 #' \dontrun{
 #' # This will produce an error message and sound effect

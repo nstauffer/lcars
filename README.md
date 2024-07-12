@@ -18,4 +18,6 @@ lcars("alert_long")
 # These will play an appropriate sound for warnings or errors when executing the expressions and return any output from the expressions
 lcars_trycatch(expr = "Kirk" / "Spock")
 lcars_trycatch(expr = as.numeric(c("7", "of", "9"))
+lcars_trycatch(expr = eval(parse(text = "Is Data a person with all the associated rights?")),
+               error = "alert")
 ```

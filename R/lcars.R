@@ -50,14 +50,12 @@ lcars_trycatch <- function(expr,
                            warning = "attention",
                            error = "error") {
   output <- tryCatch(expr = withCallingHandlers(expr = expr,
-                                                warning = function(warning) {
-                                                  lcars("warning")
-                                                  parent <- parent.env(environment())
-                                                  parent$current_warning <- warning
+                                                warning = function(warning_returned) {
+                                                  lcars(warning)
                                                 },
-                                                error = function(error) {
-                                                  lcars("error")
-                                                  stop(error)
+                                                error = function(error_returned) {
+                                                  lcars(error)
+                                                  stop(error_returned)
                                                 }))
   return(output)
 }

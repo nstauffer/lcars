@@ -7,7 +7,7 @@ remotes::install_github(repo = 'nstauffer/lcars')
 ```
 
 ## Use
-Personally, I just wanted a quick and easy way to insert [LCARS](https://memory-alpha.fandom.com/wiki/Library_Computer_Access_and_Retrieval_System) sound effects from Star Trek into my code because it sounded more fun to have completion and errors announced with those. There are a handful of sounds in the package which can all be called by name although the function defaults to a sound made by the computer when it requires a character's attention.
+Personally, I just wanted a quick and easy way to insert [LCARS](https://memory-alpha.fandom.com/wiki/Library_Computer_Access_and_Retrieval_System) sound effects from Star Trek into my code because it sounded more fun to have completion and errors announced with those. There are a handful of sounds in the package which can all be called by name although the function defaults to a sound made by the computer when it requires a character's attention. To add any other sounds in WAV format, just stick them into the "sound" folder in the package installation path then call them by name, e.g. if you add "red_alert.wav" to the folder you can use `lcars(sound = "red_alert")` to play it.
 ``` r
 # This will simply play the default attention-grabbing sound
 lcars()

@@ -4,10 +4,14 @@
 \alias{lcars_trycatch}
 \title{Evaluate an expressions, playing appropriate audio samples of LCARS sounds from Star Trek}
 \usage{
-lcars_trycatch(expr)
+lcars_trycatch(expr, warning = "attention", error = "error")
 }
 \arguments{
-\item{expr}{An expression to evaluate}
+\item{expr}{An expression to evaluate.}
+
+\item{warning}{Character string. The name of the sound to play if a warning is produced by the expression. Defaults to \code{"attention"}.}
+
+\item{errorCharacter}{string. The name of the sound to play if an error is produced by the expression. Defaults to \code{"error"}.}
 }
 \description{
 Evaluates and returns the output from an expression. If there expression produces an error or a warning, an appropriate sound effect from Star Trek The Next Generation will be played.
@@ -16,6 +20,10 @@ Evaluates and returns the output from an expression. If there expression produce
 \dontrun{
 # This will produce an error message and sound effect
 lcars_trycatch(expr = "Kirk" / "Spock")
+
+# This will produce an error message and use a more dramatic sound effect
+lcars_trycatch(expr = "Kirk" / "Spock",
+               error = "alert")
 
 # This will produce an output, a warning message, and a sound effect
 lcars_trycatch(expr = as.numeric(c("7", "of", "9")))

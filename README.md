@@ -15,13 +15,14 @@ lcars()
 # This will play an alert klaxon suitable for catastrophic situations
 lcars("alert_long")
 
-# These will play an appropriate sound for warnings or errors when executing the expressions and return any output from the expressions
+# These will play an appropriate sound for warnings or errors when executing the expressions
+# and return any output produced (if there wasn't an error)
 lcars_trycatch(expr = "Kirk" / "Spock")
 lcars_trycatch(expr = as.numeric(c("7", "of", "9"))
 lcars_trycatch(expr = eval(parse(text = "Is Data a person with all the associated rights?")),
                error = "alert")
 
-# You can also pipe into lcars_trycatch(), even whole loops
+# You can also pipe expressions into lcars_trycatch(), even whole loops
 output <- c()
 example_vector <- c("7", "of", "9")
 for (value in example_vector) {

@@ -20,4 +20,13 @@ lcars_trycatch(expr = "Kirk" / "Spock")
 lcars_trycatch(expr = as.numeric(c("7", "of", "9"))
 lcars_trycatch(expr = eval(parse(text = "Is Data a person with all the associated rights?")),
                error = "alert")
+
+# You can also pipe into lcars_trycatch(), even whole loops
+output <- c()
+example_vector <- c("7", "of", "9")
+for (value in example_vector) {
+  output <- c(output,
+              as.numeric(value))
+} |>
+  lcars_trycatch(expr = _)
 ```

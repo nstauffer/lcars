@@ -11,7 +11,7 @@ lcars_trycatch(expr, warning = "attention", error = "error")
 
 \item{warning}{Character string. The name of the sound to play if a warning is produced by the expression. Valid options are: \code{"alert"}, \code{"alert_long"}, \code{"attention"}, \code{"attention_alt"}, \code{"error"}, and \code{"warning"}. Defaults to \code{"attention"}.}
 
-\item{errorCharacter}{string. The name of the sound to play if an error is produced by the expression. Valid options are: \code{"alert"}, \code{"alert_long"}, \code{"attention"}, \code{"attention_alt"}, \code{"error"}, and \code{"warning"}. Defaults to \code{"error"}.}
+\item{error}{Character string. The name of the sound to play if an error is produced by the expression. Valid options are: \code{"alert"}, \code{"alert_long"}, \code{"attention"}, \code{"attention_alt"}, \code{"error"}, and \code{"warning"}. Defaults to \code{"error"}.}
 }
 \description{
 Evaluates and returns the output from an expression. If there expression produces an error or a warning, an appropriate sound effect from Star Trek The Next Generation will be played.

@@ -31,7 +31,7 @@ lcars <- function(sound = "attention") {
 #' Evaluates and returns the output from an expression. If there expression produces an error or a warning, an appropriate sound effect from Star Trek The Next Generation will be played.
 #' @param expr An expression to evaluate.
 #' @param warning Character string. The name of the sound to play if a warning is produced by the expression. Valid options are: \code{"alert"}, \code{"alert_long"}, \code{"attention"}, \code{"attention_alt"}, \code{"error"}, and \code{"warning"}. Defaults to \code{"attention"}.
-#' @param errorCharacter string. The name of the sound to play if an error is produced by the expression. Valid options are: \code{"alert"}, \code{"alert_long"}, \code{"attention"}, \code{"attention_alt"}, \code{"error"}, and \code{"warning"}. Defaults to \code{"error"}.
+#' @param error Character string. The name of the sound to play if an error is produced by the expression. Valid options are: \code{"alert"}, \code{"alert_long"}, \code{"attention"}, \code{"attention_alt"}, \code{"error"}, and \code{"warning"}. Defaults to \code{"error"}.
 #' @examples
 #' \dontrun{
 #' # This will produce an error message and sound effect

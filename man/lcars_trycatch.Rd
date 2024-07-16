@@ -4,12 +4,19 @@
 \alias{lcars_trycatch}
 \title{Evaluate an expressions, playing appropriate audio samples of LCARS sounds from Star Trek}
 \usage{
-lcars_trycatch(expr, warning = "attention", error = "error")
+lcars_trycatch(
+  expr,
+  success = "attention",
+  warning = "warning",
+  error = "error"
+)
 }
 \arguments{
 \item{expr}{An expression to evaluate.}
 
-\item{warning}{Character string. The name of the sound to play if a warning is produced by the expression. Valid options are: \code{"alert"}, \code{"alert_long"}, \code{"attention"}, \code{"attention_alt"}, \code{"error"}, and \code{"warning"}. Defaults to \code{"attention"}.}
+\item{success}{Character string. The name of the sound to play if the expression executes without warnings or errors. Valid options are: \code{"alert"}, \code{"alert_long"}, \code{"attention"}, \code{"attention_alt"}, \code{"error"}, and \code{"warning"}. Defaults to \code{"attention"}.}
+
+\item{warning}{Character string. The name of the sound to play if a warning is produced by the expression. Valid options are: \code{"alert"}, \code{"alert_long"}, \code{"attention"}, \code{"attention_alt"}, \code{"error"}, and \code{"warning"}. Defaults to \code{"warning"}.}
 
 \item{error}{Character string. The name of the sound to play if an error is produced by the expression. Valid options are: \code{"alert"}, \code{"alert_long"}, \code{"attention"}, \code{"attention_alt"}, \code{"error"}, and \code{"warning"}. Defaults to \code{"error"}.}
 }
@@ -18,6 +25,12 @@ Evaluates and returns the output from an expression. If there expression produce
 }
 \examples{
 \dontrun{
+# This will produce the result without warnings/errors and play a sound effect
+lcars::lcars_trycatch(expr = c("NCC-1701",
+                               paste("NCC-1701",
+                                     c("A", "B", "C", "D", "E", "F", "G", "J"),
+                                     sep = "-")))
+
 # This will produce an error message and sound effect
 lcars_trycatch(expr = "Kirk" / "Spock")
 
